@@ -2,4 +2,4 @@
 
 * [Page](README.md)
 
-* [Page2](TEST 1/TEST 2)
+* [Page2](TEST2.md)
