@@ -1,13 +1,12 @@
-# Table of contents
+# Table of Contents
 
 * [Cos'è la comunità SPAC](PiattaformaUnitaria.md)
-
-* [Guide e Manuali](Guideemanuali.md)
-    * [Come aderire alla comunità](Come_aderire_alla_comunità.md)
-    * [Come interagire con il Backlog](Come_interagire_con_il_Backlog.md) 
-    * [Come segnalare un bug](Come_segnalare_un_bug.md)
-    * [Come richiedere una nuova funzionalità](Come_richiedere_una_nuova_funzionalità.md)
-    * [Come restare informato](Come_restare_informato.md)
+* [Guide e Manuali](Guide_e_manuali/Guideemanuali.md)
+    * [Come aderire alla comunità](Guide_e_manuali/Come_aderire_alla_comunità.md)
+    * [Come interagire con il Backlog](Guide_e_manuali/Come_interagire_con_il_Backlog.md)
+    * [Come segnalare un bug](Guide_e_manuali/Come_segnalare_un_bug.md)
+    * [Come richiedere una nuova funzionalità](Guide_e_manuali/Come_richiedere_una_nuova_funzionalità.md)
+    * [Come restare informato](Guide_e_manuali/Come_restare_informato.md)
 
 
 
