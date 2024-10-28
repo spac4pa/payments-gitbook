@@ -20,7 +20,7 @@ La missione di SPAC è quella di mettere a sistema esigenze, risorse, competenze
 
 > Per maggiori dettagli [clicca qui](#).
 
-* Vantaggi dell'Adesione a SPAC
+## Vantaggi dell'Adesione a SPAC
 
 Le Regioni che decidono di aderire a SPAC ottengono una serie di vantaggi:
 
@@ -31,3 +31,15 @@ Le Regioni che decidono di aderire a SPAC ottengono una serie di vantaggi:
 - **Partecipazione Attiva**: Le Regioni aderenti possono partecipare attivamente alle decisioni della comunità dei pagamenti, contribuendo allo sviluppo e all'evoluzione delle soluzioni proposte.
   
 - **Accesso a Supporto e Formazione**: Le Regioni membri potranno ricevere supporto tecnico e formazione continua, garantendo un'implementazione e un utilizzo ottimali delle soluzioni.
+
+
+## I membri della comunità dei pagamenti
+
+- **Regione Veneto**
+- **Regione Lombardia**
+- **Regione Puglia**
+- **Regione Calabria**
+- **Regione Campania**
+- **PagoPA**
+- **Città metropolitana di Roma**
+- **Provincia autonoma di Trento**
