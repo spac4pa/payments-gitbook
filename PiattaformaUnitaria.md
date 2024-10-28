@@ -1,12 +1,12 @@
 # Cos'è la comunità SPAC
 
-# Una Comunità per una Pubblica Amministrazione più Smart in Ambito Pagamenti
+* Una Comunità per una Pubblica Amministrazione più Smart in Ambito Pagamenti
 
 **SPAC Reload** (Software condivisione e Pratiche Amministrative Collaborative) è una community dinamica e innovativa composta da diverse Regioni italiane, enti locali e altre istituzioni pubbliche, nata con l'obiettivo di sviluppare e condividere soluzioni open-source per la Pubblica Amministrazione.
 
 La missione di SPAC è quella di mettere a sistema esigenze, risorse, competenze - e al contempo controllare i costi di evoluzione e manutenzione - sulle piattaforme a favore degli enti riusanti.
 
-## Obiettivi di SPAC nell’Ambito dei Pagamenti
+* Obiettivi di SPAC nell’Ambito dei Pagamenti
 
 1. **Incentivare i pagamenti digitali**: Promuovere l'uso dei pagamenti elettronici tra le Pubbliche Amministrazioni locali e i cittadini, facilitando le relazioni telematiche.
    
@@ -20,7 +20,7 @@ La missione di SPAC è quella di mettere a sistema esigenze, risorse, competenze
 
 > Per maggiori dettagli [clicca qui](#).
 
-## Vantaggi dell'Adesione a SPAC
+* Vantaggi dell'Adesione a SPAC
 
 Le Regioni che decidono di aderire a SPAC ottengono una serie di vantaggi:
 
