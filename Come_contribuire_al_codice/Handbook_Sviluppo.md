@@ -1,6 +1,4 @@
-# Handbook Sviluppo
-
-## Definition of done
+# Definition of done
 Un Task/User Story si considera chiuso se e solo se è in produzione ed è stata staccata una nuova release, fatta eccezione per i task di sperimentazione o laboratorio.
 - **Test Coverage**: Overall (line + branch) > 90%. Vedi qui per delle indicazioni sullo sviluppo dei test.
 - **Branch Coverage**: 100%
@@ -8,7 +6,7 @@ Un Task/User Story si considera chiuso se e solo se è in produzione ed è stata
 - **Controlli statici del codice**: (es. Sonar) non sono disabilitati e presentano la valutazione A per tutte le voci
 - **Criticità di sicurezza**: non ci sono criticità di livello maggiore o uguale a HIGH
 
-### Gestione del repository
+# Gestione del repository
 - Ogni Pull Request deve essere revisionata da almeno un altro membro del team di sviluppo. Questo evita lo sviluppo autoreferenziale.
 - Modello di branching Git-flow, con l’uso di tre branch long-lived: `develop`, `uat`, `main`
 - Per evitare errori in fase di creazione delle pull-requests, il branch default è `develop`.
@@ -16,9 +14,9 @@ Un Task/User Story si considera chiuso se e solo se è in produzione ed è stata
 - Il merge tra ambienti, quindi da `develop` a `uat` e da `uat` a `main`, deve avvenire tramite merge commit.
 - Dopo l’incorporazione in `develop`, i feature-branch possono essere eliminati.
 
-### Pull-request, rilascio e versionamento
+# Pull-request, rilascio e versionamento
 
-#### Ciclo di vita Pull Request
+## Ciclo di vita Pull Request
 Ogni PR deve essere legata a un ticket Jira tramite la naming convention riportata in seguito.
 
 Si adotta una strategia short lived feature branch, per cui una PR deve soddisfare alcuni requisiti:
@@ -30,7 +28,7 @@ Si adotta una strategia short lived feature branch, per cui una PR deve soddisfa
 
 Nel caso in cui non sia possibile rispettare questi requisiti, occorre fare il possibile per dividere la PR in più sotto-task.
 
-#### Rilascio e Versionamento
+## Rilascio e Versionamento
 Il versionamento dei progetti segue il versionamento semantico `major.minor.patch` (e.g., `v1.2.1` - [Versionamento Semantico 2.0.0](https://semver.org/lang/it/)), e valgono le seguenti regole:
 - Un `fix` produce un incremento della patch
 - Un set di `feature` produce un incremento della minor
@@ -50,7 +48,10 @@ Il nuovo numero di versione è pilotato dal commit con il semantic tag più rile
 
 Il processo di versionamento è interamente basato sui titoli delle PR e non dipende dal numero di versione riportato nel `pom.xml` o nel `build.gradle`, che dovrà essere allineato manualmente.
 
-## Api Rest
+## Template Pull Request
+Il template nella descrizione delle pull request è descritto dal file .github/PULL_REQUEST_TEMPLATE.md
+
+# Api Rest
 - https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 - https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
 - https://en.wikipedia.org/wiki/Richardson_Maturity_Model
@@ -60,7 +61,7 @@ Distinguiamo due tipologie di **openapi**:
 - **interno**: associabile alle API di backend esposte da un microservizio.
 - **esterno**: generalmente non associabile a un singolo microservizio; è la specifica esterna che viene esposta su APIM.
 
-## Generazione openapi interno
+# Generazione openapi interno
 In un approccio **API-first** si tende a preferire la scrittura delle specifiche di un servizio prima della sua implementazione interna.
 
 Le specifiche di un servizio definiscono l’interfaccia con cui gli altri sistemi possono interagire con quel servizio. Lo standard per scrivere una specifica è **openapi** in formato YAML.
@@ -82,7 +83,7 @@ La proposta è mantenere gli openapi esterni in un unico repository, diverso da 
 
 Operativamente, la risorsa Terraform API referenzierà l’openapi del repository tramite un link.
 
-### Perché l’openapi interna ed esterna possono differire?
+Perché l’openapi interna ed esterna possono differire?
 Possono esserci vari motivi:
 - In un’architettura a microservizi, la struttura interna non deve trasparire all’esterno del sistema. Eventuali cambiamenti all’architettura interna (ad esempio il merge o lo split di due o più servizi) è preferibile che non abbiano impatti sullo swagger esterno (mentre ce li avranno sugli swagger interni).
 - Cambio di parametri/header per fini di autenticazione o autorizzazione.
@@ -115,8 +116,8 @@ Aderire ai principi di programmazione:
 - https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29
 
 
-## Formattazione del codice
-### Java 
+# Formattazione del codice
+## Java 
 Adottiamo la Google Java Style Guide (https://google.github.io/styleguide/javaguide.html)
 Link alla configurazione per i principali IDE (https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml) o (https://code.visualstudio.com/docs/java/java-linting)
 
