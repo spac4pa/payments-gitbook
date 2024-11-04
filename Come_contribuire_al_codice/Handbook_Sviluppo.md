@@ -127,14 +127,130 @@ Per garantire la pulizia dei file inclusi nei commit utilizziamo alcuni hook di 
 
 Per installarlo sul proprio Mac è possibile utilizzare Brew:
 
-```bash
-brew install pre-commit
+`brew install pre-commit`
+
 Se il file .pre-commit-config.yaml è già presente nella root del repository allora è sufficiente eseguire il comando:
-pre-commit install
+`pre-commit install`
 
 Se il file .pre-commit-config.yaml non fosse presente nella root del repository allora è necessario crearne uno prendendo come esempio il seguente:
 
+`repos: - repo: https://github.com/pre-commit/pre-commit-hooks rev: v4.4.0 hooks: - id: check-case-conflict - id: check-executables-have-shebangs - id: check-json - id: check-xml - id: check-yaml - id: detect-private-key - id: end-of-file-fixer exclude_types: [sql] - id: mixed-line-ending args: [ --fix=lf ] exclude_types: [sql] - id: pretty-format-json - id: trailing-whitespace args: [--markdown-linebreak-ext=md] exclude_types: [sql]`
 
-Puoi copiare e incollare questo testo in un file Markdown!
+Se si tratta di codice Python è possibile concatenare le seguenti righe alle precedenti:Se si tratta di codice Terraform è possibile concatenare le seguenti righe alle precedenti:
+
+Dopo di che eseguire:
+
+`pre-commit install`
+Fatto ciò, prima di ogni commit (tramite CLI o tramite GUI dell'IDE) viene eseguito il pre-commit.
+
+Gli script `end-of-file-fixer` e `trailing-whitespace` non falliscono ma apportano direttamente le modifiche ai file prima del commit.
+In caso di fallimento di uno step il commit non viene effettuato.
+
+Per eseguire gli hook senza fare un commit è sufficiente lanciare:
+`pre-commit run -a`
+Per aggiornare gli script eseguire:
+`pre-commit autoupdate`
+
+# Microservizio
+
+Un microservizio corrisponde a un unico applicativo Spring. Il relativo progetto è organizzato con le seguenti directory/packages rilevanti:
+
+- `config`
+- `controller`
+- `dto`
+- `model`
+- `repository`
+- `service`
+- `exception`
+- `utils`
+- `event` (handler messaggi nel caso in cui il servizio sia connesso a una coda)
+
+## Consigliato l’uso di:
+
+- Lombok
+
+L’evoluzione degli schemi degli eventuali DB relazionali è gestita con Liquibase.
+
+## Pratiche sconsigliate
+
+In un’architettura a microservizi è fondamentale mantenere i servizi disaccoppiati per garantire l'indipendenza del ciclo di vita di sviluppo e rilascio.
+
+Sono deprecate librerie comuni e package condivisi tra microservizi. I servizi che utilizzano lo stesso stack tecnologico devono condividere soltanto il framework su cui sono basati, ad esempio Spring, Quarkus, Micronaut, ecc.
+
+Partendo dal framework e dalle sue astrazioni vanno sviluppate tutte le funzionalità dell’applicazione limitando allo stretto indispensabile l’aggiunta di layer di astrazione o la riscrittura di parti del framework.
+
+## refs:
+- https://medium.com/@shanthi.shyju/shared-libraries-in-microservices-avoiding-an-antipattern-c9a3161276e
+- https://medium.com/duda/shared-libraries-design-and-best-practices-710774ae0bdc
+- https://stackoverflow.com/questions/48961000/why-shared-libraries-between-microservices-are-bad
 
 
+# Stack reattivo vs stack tradizionale
+
+Valutare lo stack reattivo con Spring e Reactor soltanto nei casi in cui le performance sono un fattore critico per il sistema. 
+In tutti gli altri casi preferire lo stack tradizionale in quanto esiste una knowledge base più diffusa ed è più semplice manutenere l’applicativo nel lungo periodo.
+
+## Tool di Build
+
+I tool attualmente accettati sono Maven e Gradle. Gradle viene preferito in quanto consente di pinnare l’hash delle dipendenze per cui aderisce agli standard di security. È inoltre preferibile utilizzare il linguaggio Kotlin per la scrittura del file `build.gradle.kts`.
+
+## CI/CD
+- Utilizzo di helm chart per deploy su AKS, come previsto da pratiche infra.  
+- Sonar Cloud
+- Esclusioni Sonar: classi configurazione, test, enumerazioni
+- La promozione tramite PR da DEV a UAT innesca una suite di test e2e (postman o k6)
+- Possibilità di deployare in DEV da qualsiasi branch (rimuovere filtri sul nome del branch)
+
+
+ 
+Lo strumento preferito per eseguire le pipeline di CI è **Github Actions**.
+Lo strumento preferito per eseguire le pipeline di CD è **Azure DevOps**.
+
+# Naming Pattern
+
+Micro-servizi: `p4pa-xxxx-yyyy`
+
+### Naming Branch e PR
+
+Per innescare l’automazione Pull Requests <--> Jira e consentire l’aggiornamento automatico dello stato dei task, è necessario adottare le seguenti pratiche:
+
+- **Denominazione branch:** `IDTASK-descrizione-feature` es. `ISB-180-develop-controller-for-onboarding-workflow-api`
+- **Titolo PR:** `[IDTASK] Titolo PR` es. `[ISB-180] Develop Spring Boot Controller of APIs for Citizen Onboarding Workflow`
+- **Messaggio commit:** `"[IDTASK] messaggio di commit"`
+
+### Container non-root
+
+È best practice far girare i container con un utente non-root. A grandi linee occorre effettuare questi passaggi:
+
+1. nel dockerfile
+   - creare un utente non root
+   - correggere i permessi su eventuali file o java agent che l’applicazione deve leggere
+   - impostare il nuovo utente come utente corrente dell’immagine docker
+2. nei values dell’helm template
+   - impostare il security context per girare con l’utente non root
+
+Vedi qui per qualche snippet di esempio.
+
+### Pinning dipendenze
+
+Best practice per qualunque dipendenza importata in un progetto è pinnare lo sha del commit da cui si clona. Questa pratica riguarda: le dipendenze del sistema di build (gradle, in maven non è supportato il pinnning), le immagini docker, le action github e qualunque altro software di terzi parti. Vedi qui per degli snippet di esempio su come pinnare.
+
+### Configurazione Azure EventHub
+
+Vedi il documento HB Dev - Configurazione Azure Eventhub per le configurazioni raccomandate da Microsoft nel caso di utilizzo del loro broker managed.
+
+### Github Packages
+
+È necessario seguire le linee guida di Technology per mantenere un livello di sicurezza elevato quando si utilizzano i github packages per gestire le immagini docker dei microservizi. Le linee guida complete qui.
+
+### Github Secrets
+
+Linee guida di Technology qui.
+
+### Affinity e anti-affinity
+
+Per i prodotti in produzione è necessario rispettare determinati livelli di availability. Per aumentare questa caratteristica su k8s è possibile impostare il deployment per schedulare i pod su nodi diversi per tutelare il funzionamento del prodotto se uno dei nodi cade. Linee guida devops qui.
+
+esempio concreto di implementazione su ms TAE:
+- https://github.com/pagopa/rtd-ms-file-reporter/pull/113
+- https://github.com/pagopa/rtd-ms-file-register/pull/172
