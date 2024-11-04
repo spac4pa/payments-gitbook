@@ -9,8 +9,8 @@
     * [Come restare informato](Guide_e_manuali/Come_restare_informato.md)
 
 * [Come contribuire al codice](Come_contribuire_al_codice)
-    * [Modalità di contribuzione](Modalità_di_contribuzione.md)
-    * [Handbook_Sviluppo.md](Handbook_Sviluppo.md)
+    * [Modalità di contribuzione](Come_contribuire_al_codice/Modalità_di_contribuzione.md)
+    * [Handbook_Sviluppo.md](Come_contribuire_al_codice/Handbook_Sviluppo.md)
 
 
 
