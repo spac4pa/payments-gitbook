@@ -8,6 +8,10 @@
     * [Come richiedere una nuova funzionalità](Guide_e_manuali/Come_richiedere_una_nuova_funzionalità.md)
     * [Come restare informato](Guide_e_manuali/Come_restare_informato.md)
 
+* [Come contribuire al codice](Come_contribuire_al_codice)
+    * [Modalità di contribuzione](Modalità_di_contribuzione.md)
+    * [Handbook_Sviluppo.md](Handbook_Sviluppo.md)
+
 
 
     
