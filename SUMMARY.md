@@ -12,7 +12,6 @@
 
 * [Come contribuire al codice](Come_contribuire_al_codice)
     * [Modalità di contribuzione](Come_contribuire_al_codice/Modalità_di_contribuzione.md)
-    * [Handbook Sviluppo](Come_contribuire_al_codice/Handbook_Sviluppo.md)
 
 
 
