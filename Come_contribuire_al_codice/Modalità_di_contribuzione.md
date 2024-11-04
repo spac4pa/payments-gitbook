@@ -22,8 +22,8 @@ Le pratiche di sviluppo seguono un modello gitflow semplificato e saranno docume
    - se i commit contengono nuove feature, c'è un incremento del minor
    - se i commit hanno prodotto una braking change, c'è un incremento del major
 
-Workflow_Github.png 
-![Workflow Github](Immagini/woekflow.png)
+
+![Foto di esempio](spac4pa/payments-gitbook/Immagini/Workflow_Github.png)
 
 # Ambienti
 PagoPA mette a disposizione due ambienti per supportare il processo di sviluppo e controllo qualità:
