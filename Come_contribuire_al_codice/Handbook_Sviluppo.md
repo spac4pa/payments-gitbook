@@ -2,7 +2,6 @@
 
 ## Definition of done
 Un Task/User Story si considera chiuso se e solo se è in produzione ed è stata staccata una nuova release, fatta eccezione per i task di sperimentazione o laboratorio.
-
 - **Test Coverage**: Overall (line + branch) > 90%. Vedi qui per delle indicazioni sullo sviluppo dei test.
 - **Branch Coverage**: 100%
 - **Feature test**: superati con successo
