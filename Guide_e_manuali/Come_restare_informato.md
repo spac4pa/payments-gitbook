@@ -5,7 +5,7 @@ Se desideri rimanere aggiornato sulle evoluzioni tecniche della nostra piattafor
 ## Come Iscriversi
 
 1. **Invia un'Email**:  
-   Invia un'email vuota a: [info@piattaformaunitaria.it](mailto:info@piattaformaunitaria.it).  
+   Invia un'email vuota a: [info@piattaformaunitaria.it](mailto:payments@spac4pa.org).  
    L'indirizzo email utilizzato per inviare il messaggio verrà automaticamente registrato per ricevere la nostra newsletter tecnica.
 
 2. **Conferma dell'Iscrizione**:  
@@ -13,7 +13,7 @@ Se desideri rimanere aggiornato sulle evoluzioni tecniche della nostra piattafor
 
 ## Annullare l'Iscrizione
 
-Per annullare l'iscrizione alla newsletter tecnica, invia un'email a: [info@piattaformaunitaria.it](mailto:info@piattaformaunitaria.it) con la richiesta di rimozione. Il nostro team si occuperà di annullare la tua iscrizione, e non riceverai ulteriori comunicazioni.
+Per annullare l'iscrizione alla newsletter tecnica, invia un'email a: [info@piattaformaunitaria.it](mailto:payments@spac4pa.org) con la richiesta di rimozione. Il nostro team si occuperà di annullare la tua iscrizione, e non riceverai ulteriori comunicazioni.
 
 ---
 
