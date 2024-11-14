@@ -3,7 +3,7 @@
 Per poter aderire alla comunità **SPAC Reload**, sarà necessario seguire questi passaggi:
 
 1. **Prendere visione di tutta la documentazione amministrativa**  
-   [Consulta qui la documentazione](#).
+   [Consulta qui la documentazione](https://bur.regione.veneto.it/BurvServices/pubblica/DettaglioDgr.aspx?id=522414).
 
 2. **Definire la modalità di adesione**:
    - **Membro base**: Accesso al catalogo dei servizi erogati dal soggetto gestore.
