@@ -10,7 +10,7 @@
     * [Come visonare la roadmap](Guide_e_manuali/Come_visionare_la_roadmap.md)
 
 
-* [Come contribuire al codice](Come_contribuire_al_codice)
+* [Come contribuire al codice](Come_contribuire_al_codice.md)
     * [Modalità di contribuzione](Come_contribuire_al_codice/Modalità_di_contribuzione.md)
 
 
