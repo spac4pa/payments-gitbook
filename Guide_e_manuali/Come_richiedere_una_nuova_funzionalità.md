@@ -6,16 +6,16 @@ Se hai identificato una nuova funzionalità che potrebbe migliorare un progetto,
 
 Per richiedere lo sviluppo di una nuova funzionalità, segui questi passaggi:
 
-1. **Accedi al Repository GitHub del Progetto**: Vai alla sezione **Issues** [cliccando qui](https://github.com/tuo-progetto/issues/new/choose) (assicurati di utilizzare il link corretto per il repository specifico).
+1. **Accedi al Repository GitHub del Progetto**: Vai alla sezione **Issues** [cliccando qui](https://github.com/spac4pa/payments-community/issues/new/choose).
 
-2. **Crea un Nuovo Issue**: Seleziona la categoria **Feature request**.
+2. **Crea una nuova Issue**: Seleziona la categoria **Feature request**.
 
 3. **Compila il Modulo di Segnalazione**:
    - **Titolo**: Inserisci un titolo descrittivo.
    - **Descrizione**: Spiega in dettaglio la funzionalità proposta, indicando come potrebbe migliorare il progetto.
    - **Screenshot o Mockup**: Allega eventuali screenshot, mockup o file che possano aiutare a illustrare meglio la tua richiesta.
 
-4. **Invia la Richiesta di Funzionalità**: Una volta completati tutti i campi, clicca su **“Submit New Issue”** per inviare la segnalazione.
+4. **Invia la Richiesta**: Una volta completati tutti i campi, clicca su **“Submit New Issue”** per inviare la segnalazione.
 
 ## Passaggi Successivi
 
