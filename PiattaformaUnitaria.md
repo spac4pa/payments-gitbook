@@ -43,3 +43,5 @@ Le Regioni che decidono di aderire a SPAC ottengono una serie di vantaggi:
 - **PagoPA**
 - **Città metropolitana di Roma**
 - **Provincia autonoma di Trento**
+- **Regione Valle d'Aosta**
+- **Regione Lazio**
