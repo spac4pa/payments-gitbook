@@ -1,26 +1,24 @@
 # Come Richiedere una Nuova Funzionalità
 
-Se hai identificato una nuova funzionalità che potrebbe migliorare la piattaforma, puoi utilizzare il sistema di issue tracking di GitHub per comunicarlo al team di sviluppo. Ecco una guida passo-passo su come procedere:
+Se hai identificato una nuova funzionalità che potrebbe migliorare un progetto, puoi utilizzare il sistema di issue tracking di GitHub per comunicarlo al team di sviluppo. Ecco una guida passo-passo su come procedere:
 
 ## Passaggi per Aprire un Issue su GitHub
 
-1. **Accedi al Repository**: [Clicca qui](#) per raggiungere il repository della piattaforma su GitHub.
+Per richiedere lo sviluppo di una nuova funzionalità, segui questi passaggi:
 
-2. **Crea una Nuova Issue**: Clicca sul pulsante **“New issue”** per aprire un nuovo issue.
+1. **Accedi al Repository GitHub del Progetto**: Vai alla sezione **Issues** [cliccando qui](https://github.com/tuo-progetto/issues/new/choose) (assicurati di utilizzare il link corretto per il repository specifico).
 
-3. **Seleziona il Template "Nuova Funzionalità"**: Scegli il template di richiesta per nuove funzionalità, se disponibile.
+2. **Crea un Nuovo Issue**: Seleziona la categoria **Feature request**.
 
-4. **Compila il Modulo dell’Issue**:
-   - **Titolo**: Inserisci un titolo chiaro e descrittivo.
-   - **Descrizione**: Descrivi la nuova funzionalità proposta, spiegando in che modo potrebbe migliorare la piattaforma.
-   - **Motivazione**: Indica le ragioni per cui ritieni questa funzionalità utile.
+3. **Compila il Modulo di Segnalazione**:
+   - **Titolo**: Inserisci un titolo descrittivo.
+   - **Descrizione**: Spiega in dettaglio la funzionalità proposta, indicando come potrebbe migliorare il progetto.
+   - **Screenshot o Mockup**: Allega eventuali screenshot, mockup o file che possano aiutare a illustrare meglio la tua richiesta.
 
-5. **Allega File (Opzionale)**: Se necessario, allega file o screenshot per fornire ulteriori dettagli che possano facilitare la comprensione della tua proposta.
-
-6. **Crea l’Issue**: Clicca su **“Submit new issue”** per inviare la richiesta.
+4. **Invia la Richiesta di Funzionalità**: Una volta completati tutti i campi, clicca su **“Submit New Issue”** per inviare la segnalazione.
 
 ## Passaggi Successivi
 
-Una volta registrata la richiesta, avrai la possibilità di:
-- **Richiedere lo Sviluppo della Funzionalità** al maintainer.
-- **Provvedere allo Sviluppo** autonomo della funzionalità (consulta la guida **Come Contribuire al Codice** per i dettagli su come iniziare a collaborare attivamente).
+Dopo aver registrato la richiesta, potrai:
+- **Richiedere l’Implementazione della Funzionalità** direttamente al maintainer del progetto.
+- **Contribuire Attivamente** allo sviluppo della funzionalità se desideri partecipare al progetto.
