@@ -28,7 +28,7 @@ Le pratiche di sviluppo seguono un modello gitflow semplificato e saranno docume
 # Ambienti
 PagoPA mette a disposizione due ambienti per supportare il processo di sviluppo e controllo qualità:
 
-- Un ambiente di sviluppo (o di dev) accessibile da tutti i collaboratori, utile per semplificare le pratiche di sviluppo;
+- Un ambiente di sviluppo (o di dev) accessibile da tutti i collaboratori, utile per semplificare le pratiche di sviluppo.
 - Un ambiente di User Acceptance Testing / Quality Assurance (o di uat) accessibile a tutti i membri della Comunità SPAC reload per valutare le feature e la qualità operativa.
 
 Per tutti gli ambienti deve essere pienamente adottato l'approccio IaC (Terraform) al fine di poter sempre consentire alle amministrazioni riusanti di ricostruire l’ambiente in cui l’applicativo è operato.
