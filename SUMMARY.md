@@ -12,7 +12,6 @@
 
 * [Come contribuire al codice](Come_contribuire_al_codice.md)
     * [Modalità di contribuzione](Come_contribuire_al_codice/Modalità_di_contribuzione.md)
-* [Documentazione tecnica](Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati.md)
 
 
 
