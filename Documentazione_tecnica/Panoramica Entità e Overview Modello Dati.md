@@ -34,7 +34,7 @@ L’entità Posizione Debitoria rappresenta probabilmente l’evoluzione princip
 
 Passare dall’entità fondante dovuto di MyPay alla Posizione Debitoria ha comportato una maggiore complessità nella gestione degli stati (ci sarà apposito appuntamento per discuterne).
 
-![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image17.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image1.png)
 
 **DebtPosition**: entità principale in cui vengono definiti gli attributi caratterizzanti di una Debt Position.
 
