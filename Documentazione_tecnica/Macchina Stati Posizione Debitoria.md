@@ -20,6 +20,7 @@ Una Posizione Debitoria è creabile/modificabile/annullabile solo per gli enti i
 ![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Macchina_Stati_Posizione_Debitoria_Images/image1.png)
 
 Mermaid Diagram
+
 ![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Macchina_Stati_Posizione_Debitoria_Images/image2.png)
 
 Per le seguenti transizioni:
