@@ -13,7 +13,7 @@ La correttezza della soluzione viene continuamente testata all’interno delle p
 Ogni classe scritta è corredata di opportuno test unitario, realizzato mediante il framework JUnit 5\.  
 Il processo di revisione delle lavorazioni contempla una fase automatica che: 
 
-![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Testing_Osservabilita_e_monitoraggio_log_Images/image20.png)
+![Prova](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Testing_Osservabilita_e_monitoraggio_log_Images/image20.png)
 
 * Esegue i test unitari  
 * Esegue un'analisi statica del codice mediante SonarQube  
