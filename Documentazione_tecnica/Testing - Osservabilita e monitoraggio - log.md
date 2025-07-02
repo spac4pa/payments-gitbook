@@ -1,4 +1,4 @@
-# Appuntamento 8 \- Testing, Osservabilità e monitoraggio (con strumenti Azure), log
+# Testing, Osservabilità e monitoraggio (con strumenti Azure), log
 
 # 1\. Introduzione
 
