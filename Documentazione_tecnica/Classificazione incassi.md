@@ -51,7 +51,7 @@ Nella tabella seguente vengono riportate le entità coinvolte nel processo di cl
 
 # 2\. ASIS
 
-![][image1]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image5.png)
 
 Attualmente:
 
@@ -93,19 +93,23 @@ Verranno alimentate le tabelle:
 
 L’esito della Riconciliazione non si traduce di fatto in un cambio di stato dell’entità Posizione Debitoria, ma nell’alimentazione di un’altra tabella.
 
-## 2.1. Flusso di riconciliazione RT![][image2]![][image3]
+## 2.1. Flusso di riconciliazione RT
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image7.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image6.png)
 
 ## 2.2. Flusso di riconciliazione RENDICONTAZIONE
 
-![][image4]  
-![][image5]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image9.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image8.png)
 
 ### 
 
 ### 2.2.1. Gestione Rendicontanzione codiceEsito 9
 
 Nella tabella che registra le rendicontazioni il campo cod\_dati\_sing\_pagam\_codice\_esito\_singolo\_pagamento può essere valorizzato a '0', per le rendicontazioni ‘standard’, oppure a '9', in dipendenza del codiceEsitoSingoloPagamento su ogni singolo pagamento nel file delle rendicontazioni.  
-![][image6]  
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image11.png)
+
 Dopo la chiamata del WS paaSilRegistraPagamento su MyPay i dati del pagamento ‘fittizio’ associato alla rendicontazione 9, nel senso non una vera RT, ma una RT costruita con un merge dei dati del dovuto e della rendicontazione, segue il flusso normale della migrazione, aggiornando la tabella mygov\_flusso\_export.
 
 ### 2.2.2 Gestione pagamenti doppi
@@ -126,7 +130,7 @@ Da notare che:
 
 ## 2.3. Flusso di riconciliazione TESORERIA
 
- ![][image7]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image10.png)
 
 # 3\. Workflow
 
@@ -137,9 +141,9 @@ Il flusso di Classificazione incassi si comporrà di una serie di workflow che m
 Il flusso di Ricevuta pagamento invoca direttamente il Workflow per la classificazione dello IUD, invocato da un listener posto in ascolto su una coda di eventi Kafka.  
 È possibile ricevere ricevute di pagamento a beneficio degli enti gestiti, ma non generate da Piattaforma Unitaria: queste, non potendo essere ricondotte alle Posizioni Debitorie persistite, non saranno provviste di IUD ed invocheranno direttamente il Workflow per la classificazione del Transfer.  
 Qualora caricate manualmente, sarà presente un ulteriore Workflow di ingestion.  
-![][image8]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image13.png)
 
-![][image9]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image12.png)
 
 * workflowType: ReceiptManualIngestionWF  
 * taskQueue: ReceiptManualIngestionWF  
@@ -153,8 +157,9 @@ Qualora caricate manualmente, sarà presente un ulteriore Workflow di ingestion.
 ## 3.2. Pagamento Notificati
 
 Il flusso di Pagamenti Notificati si compone di un solo Workflow invocato on-demand tramite una API esposta al SIL.  
-![][image10]  
-![][image11]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image16.png)
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image14.png)
 
 * workflowType: PaymentNotificationIngestionWF  
 * taskQueue: PaymentNotificationIngestionWF  
@@ -175,8 +180,9 @@ Il flusso di Rendicontazione si comporrà di 2 workflow:
 2. Ingestion singolo file  
    * Invocato on-demand dal workflow precedente o dalle API dedite al caricamento manuale
 
-![][image12]  
-![][image13]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image15.png) 
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image17.png)
 
 * workflowType: PaymentsReportingPagoPaBrokersFetchWF  
 * taskQueue: PaymentsReportingPagoPaBrokersFetchWF  
@@ -185,7 +191,7 @@ Il flusso di Rendicontazione si comporrà di 2 workflow:
   * FetchAllBrokers  
   * RetrieveBrokeredOrganizations
 
-![][image14]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image18.png)
 
 * workflowType: PaymentsReportingPagoPaOrganizationFetchWF  
 * taskQueue: PaymentsReportingPagoPaOrganizationFetchWF  
@@ -194,7 +200,7 @@ Il flusso di Rendicontazione si comporrà di 2 workflow:
   * RetrieveNotImportedPagoPaPaymentsReportingIds  
   * FetchPagoPaPaymentsReportingFiles
 
-![][image15]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image19.png)
 
 * workflowType: PaymentsReportingIngestionWF  
 * taskQueue: PaymentsReportingIngestionWF  
@@ -215,7 +221,7 @@ La Tesoreria si comporrà di 4 workflow invocati dall’API dedita al caricament
 3. Ingestion giornale di cassa OPI  
 4. Ingestion estratto conto poste
 
-![][image16]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image20.png)
 
 ### 3.4.1. Tesoreria IUFs
 
@@ -225,7 +231,7 @@ I seguenti WF sono strutturati in maniera simile in quanto in tutti i tracciati 
 * Ingestion giornale di cassa OPI  
 * Ingestion estratto conto poste
 
-![][image17]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image21.png)
 
 * workflowType: TreasuryOpiIngestionWF  
 * taskQueue: TreasuryOpiIngestionWF  
@@ -258,21 +264,25 @@ I seguenti WF sono strutturati in maniera simile in quanto in tutti i tracciati 
 ### 3.4.2. Tesoreria IUFs o IUVs
 
 Mentre il WF Ingestion giornale di cassa XLS ha una struttura diversa, dovuta al fatto che il tracciato può contenere o lo IUF o lo IUV (qualora li abbia entrambi, dare priorità alla casistica IUF).  
-![][image18]  
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image22.png)
+
 workflowId: \<TASK\_QUEUE\> \+ ingestionFlowFileId  
 Il flusso di Tesoreria IUV non sarà implementato in quanto attualmente non unicamente riconducibile ad una rata: lo IUV e l’organizationId non garantiscono l’univocità del riconoscimento in quanto gli enti beneficiari secondari, avendo IUV propri, possono collidere con gli IUV del dell’ente primario.
 
 ## 3.5. Classificazione incassi
 
-La Classificazione incassi si compone di 3 workflow, attivati come documentato nel diagramma di sequenza sottostante in base all’arrivo di uno qualsiasi degli eventi associati alle Ricevute, Pagamenti notificati, Rendicontazione e/o alla Tesoreria.  
-![][image19]
+La Classificazione incassi si compone di 3 workflow, attivati come documentato nel diagramma di sequenza sottostante in base all’arrivo di uno qualsiasi degli eventi associati alle Ricevute, Pagamenti notificati, Rendicontazione e/o alla Tesoreria. 
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image21.png)
 
 L’uso dello IUF e dello IUV come workflowID garantisce l’elaborazione sequenziale degli eventi.  
-![][image20]
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image24.png)
 
 ### 3.5.1. Classificazione IUD
 
-![][image21]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image1.png)
 
 * workflowType: IudClassificationWF  
 * taskQueue: IudClassificationWF  
@@ -296,7 +306,7 @@ La determinazione dell’etichetta avviene secondo la seguente tabella
 
 ### 3.5.2. Classificazione IUF
 
-![][image22]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image2.png)
 
 * workflowType: IufClassificationWF  
 * taskQueue: IufClassificationWF  
@@ -325,7 +335,7 @@ La determinazione dell’etichetta avviene secondo la seguente tabella
 
 ### 3.5.3. Classificazione Transfer
 
-![][image23]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Classificazione_incassi_Images/image3.png)
 
 * workflowType: TransferClassificationWF  
 * taskQueue: TransferClassificationWF  
