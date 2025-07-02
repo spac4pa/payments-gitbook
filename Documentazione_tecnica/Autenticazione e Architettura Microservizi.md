@@ -16,7 +16,7 @@ Ogni microservizio presenta una delle seguenti classificazioni:
 
 ## Componenti
 
-![][image1]
+![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image17.png)
 
 ### Microservizi di frontiera
 
