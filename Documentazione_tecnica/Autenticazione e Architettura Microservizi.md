@@ -16,7 +16,7 @@ Ogni microservizio presenta una delle seguenti classificazioni:
 
 ## Componenti
 
-![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image17.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image17.png)
 
 ### Microservizi di frontiera
 
@@ -116,7 +116,7 @@ Una Posizione Debitoria è creabile/modificabile/annullabile solo per gli enti i
 
 ## Installment State Diagram
 
-![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image5.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image5.png)
 
 Per le seguenti transizioni:
 
@@ -297,11 +297,11 @@ Il componente deve essere integrata con diversi sistemi che possono partecipare 
 
 ## Vista dinamica delle componenti
 
-![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image9.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image9.png)
  Sequence \- creazione nuovo client  
-![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image3.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image3.png)
 Sequence \- revoke client  
-![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image16.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image16.png)
 Sequence \- a2a request
 
 ## Data layer
@@ -310,7 +310,7 @@ Sequence \- a2a request
 
 La componente **p4pa-auth** procederà a registrare i client\_id e i rispettivi client\_secret associati ad ogni ente.
 
-![][image6]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image19.png)
 
 **client\_a2a**
 
@@ -394,30 +394,30 @@ E' rilevante osservare che l’IAM interno di **Piattaforma Unitaria** interagis
 
 #### **Diagramma delle componenti**
 
-![][image7]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image2.png)
 
 Nonostante si sia proposto il protocollo **Token Exchange**, qualora l’IAM fosse interno alla propria installazione, si potrebbe benissimo utilizzare delle *grant\_type* diverse ed implementare così protocolli alternativi, come l’**Authentication Code Flow**.
 
 #### **Diagramma dell’architettura**
 
-![][image8]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image15.png)
 
 #### 
 
 #### **Vista dinamica delle componenti**
 
-![][image9]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image9.png)
 
 Gli amministratori non saranno in grado di aggiungere i permessi ai tipi di dovuto all’interno di **Piattaforma Unitaria**, o in generale di osservare la lista degli operatori, fintanto che questi non abbiano acceduto almeno una volta ed accettato i termini di servizio.  
 Se durante la login l’utente non risulta aver accettato i ToS, riceverà un **AccessToken** con scope limitato alla sola invocazione dell’API di accettazione dei ToS. L’API di accettazione dei ToS pertanto fornirà un nuovo **AccessToken** abilitato all’invocazione di tutte le altre API
 
 Insieme all’**AccessToken** verrà restituito anche il **RefreshToken**, che il FE dovrà utilizzare per ottenere un **AccessToken** nuovo alla sua scadenza.
 
-![][image10]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image12.png)
 
-![][image11]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image20.png)
 
-![][image12]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image18.png)
 
 L’aggiunta di nuovi operatori o la modifica dei loro ruoli all’interno di Piattaforma Unitaria sarà disponibile solamente se si configura la modalità di login priva dell’ente di accesso.
 
@@ -434,7 +434,7 @@ La componente **p4pa-auth** tratta in maniera transiente i dati dell’utente (t
 #### **Dati persistiti**
 
 La componente **p4pa-auth** procederà a registrare gli utenti e la loro relazione con gli enti ad ogni accesso.  
-![][image13]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image6.png)
 
 Nella modalità di esecuzione “ente di accesso”, i dati relativi agli utenti non sono persistiti allo scopo di regolare i permessi di accesso all’applicativo, ma solamente per permettere all’amministratore dell’ente di poter configurare i permessi a grana fine (abilitazione alla gestione di particolari tipologia di pagamento).
 
@@ -495,33 +495,33 @@ Il modello **UserInfo** non è conforme ad uno standard, ma presenta dei campi c
 
 #### **Dati persistiti**
 
-![][image14]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image1.png)
 
 # Modello Dati
 
 ## Classification
 
-![][image15]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image4.png)
 
-![][image16]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image7.png)
 
 ## Debt Positions
 
-![][image17]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image10.png)
 
-![][image18]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image13.png)
 
 ## Organizations
 
-![][image19]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image11.png)
 
 ## Process Executions
 
-![][image20]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image8.png)
 
 ## Workflow Hub
 
-![][image21]  
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image21.png)
 
 
 [^1]: [https://selfcare.pagopa.it/](https://selfcare.pagopa.it/)
