@@ -34,7 +34,7 @@ L’entità Posizione Debitoria rappresenta probabilmente l’evoluzione princip
 
 Passare dall’entità fondante dovuto di MyPay alla Posizione Debitoria ha comportato una maggiore complessità nella gestione degli stati (ci sarà apposito appuntamento per discuterne).
 
-![][image1]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image17.png)
 
 **DebtPosition**: entità principale in cui vengono definiti gli attributi caratterizzanti di una Debt Position.
 
@@ -80,8 +80,7 @@ Per una maggiore fruibilità abbiamo stabilito di avere due sotto-entità:
 **Debt Position Type Org** rappresenta l’utilizzo di una particolare Debt Position Type da parte di uno specifico EC. Ogni EC per definire le proprie Tipologie di Posizioni Debitorie attingerà al catalogo e andrà poi a specializzare alcuni attributi in funzione delle proprie esigenze.  
 Le abilitazioni degli operatori sono conservate nell’entità debt position type org operators
 
-![][image2]
-
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image3.png)
 # Classification
 
 Lo schema classification contiene le seguenti entità:
@@ -107,7 +106,7 @@ Contiene le informazioni relative ai flussi di rendicontazione, sia quelli recup
 **Treasury**  
 Contiene le informazioni relative ai flussi di tesoreria
 
-![][image3]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image4.png)
 
 # Organization
 
@@ -128,7 +127,7 @@ Contiene l’elenco dei codici di tassonomia
 
 Process Executions rappresenta il fulcro dei file in ingresso/uscita da Piattaforma Unitaria, ogni import o export è tracciato nelle tabelle di riferimento.
 
-![][image4]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Panoramica_Entita_e_Overview_Modello_Dati_Images/image2.png)
 
 **Export File**  
 Contiene l’elenco di tutti gli export richiesti a Piattaforma Unitaria con un campo export\_file\_type che identifica la tipologia e il campo status che rappresenta lo stato di tale esportazione
