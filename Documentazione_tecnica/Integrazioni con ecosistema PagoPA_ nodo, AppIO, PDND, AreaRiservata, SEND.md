@@ -41,7 +41,8 @@ E' opportuno soffermarsi sull’integrazione Piattaforma Unitaria GPD. Ad oggi i
 Questo comporta che per ogni Posizione Debitoria presente in Piattaforma Unitaria verranno comunicate a GPD tante Posizioni Debitorie tanti installment sono presenti nella Posizione Debitoria di PU. Nell’attuale modello dati il campo iupd è storato a livello di installment (vedi screenshot).  
 Nel momento in cui verrà implementato il pieno supporto a tutte le combinazioni di Opzioni di Pagamento valuteremo la possibilità di ripristinare la corrispondenza 1:1 tra la PD di PU e la PD di GPD. Sarà importante valutare e verificare i comportamenti delle due macchine a stati, in modo che le esigenze dell’EC (es: modificare una rata di un OdP quanto un’altra rata è già stata pagata) siano completamente soddisfatte dalla business logic.
 
-![][image1]  
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Integrazioni_con_ecosistema_PagoPA_nodo_AppIO_PDND_AreaRiservata_SEND_Images/image2.png)
+
 E' importante evidenziare che il modello dati non dipende dallo scenario di integrazione scelto, e che eventuali evoluzioni (che non necessitino nuovi attributi) dell’integrazione sono circoscritte all’interno di p4pa-pagopa-payments.  
 Ogni evento di comunicazione in ingresso/uscita da p4pa-pagopa-payments verso il nodo viene pubblicato in un’apposita coda (eventi poi consumati e catalogati da p4pa-registries) per supportare eventuali attività di assistenza e per rispondere ad un requisito mandatorio di PagoPA di storare per 24 mesi gli eventi di comunicazione tra stazione-nodo.  
 I processi di allineamento dati con il nodo (ACA e GPD) vengono effettuati in modalità asincrona, questo garantisce la corretta esecuzione delle operazioni sui dati di Piattaforma Unitaria a prescindere dal buon esito della comunicazione con un elemento esterno all’applicativo (archivi del nodo dei pagamenti). Il processo asincrono eseguirà un numero finito di tentativi di comunicazione in modalità autonoma e indipendente (attraverso [Temporal.IO](http://temporal.io/))
@@ -70,7 +71,8 @@ Il valore aggiunto dell’integrazione diretta Piattaforma Unitaria-SEND consist
 Piattaforma Unitaria dopo aver ricevuto da apposite API esposte su p4pa-pu-sil le informazioni della notifica (e dei relativi file) gestisce il processo di comunicazione verso SEND. Sempre su p4pa-pu-sil sono esposte le API per consentire ai SIL di conoscere lo stato (e di recuperare lo IUN e la data di notifica) o di cancellare la notifica se non ancora perfezionata.  
 Ad oggi è previsto solo l’interfacciamento singolo, nulla vieta al SIL di effettuare diverse chiamate alla medesima API.  
 Il microservizio p4pa-send-notification analogamente a p4pa-io-notification ha un proprio database MongoDB in cui vengono conservate le informazioni di tracing relative all’entità notifica e ai vari attributi recuperati da SEND.  
-![][image2]![][image3]
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Integrazioni_con_ecosistema_PagoPA_nodo_AppIO_PDND_AreaRiservata_SEND_Images/image3.png)
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Integrazioni_con_ecosistema_PagoPA_nodo_AppIO_PDND_AreaRiservata_SEND_Images/image1.png)
 
 Inserimento di una nuova notifica con file (e relativo avviso)
 
