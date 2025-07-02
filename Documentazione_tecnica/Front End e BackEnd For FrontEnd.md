@@ -1,4 +1,4 @@
-# Appuntamento 9 \- Front End e BackEnd For FrontEnd
+# Front End e BackEnd For FrontEnd
 
 ## Introduzione
 
@@ -7,7 +7,7 @@ Nella fattispecie il processo di implementazione della componente di presentazio
 
 ## Ciclo di Lavorazione
 
- ![][image1]  
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Front_End_e_BackEnd_For_FrontEnd_Images/image1.png)
    
 Tutte le sezioni presenti in MyPay/MyPivot sono state riviste, rianalizzate e rivalidate alla luce del nuovo modello dati.  
 Tale processo coinvolge un team multidisciplinare che converge verso una soluzione condivisa e che può offrire il miglior compromesso implementativo tra FE e BFF.  
@@ -21,8 +21,10 @@ Per il team PU Client ciò che è documentato nel Figma rappresenta il punto di 
 
 ## BackEnd for Front End (BFF)
 
-Il layer di BackEnd for Front End si rende necessario per implementare il relativo pattern  
-![][image2]  
+Il layer di BackEnd for Front End si rende necessario per implementare il relativo pattern 
+
+![](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Front_End_e_BackEnd_For_FrontEnd_Images/image3.png)
+
 Il BFF consente di concentrare all’interno di un apposito layer le necessità legate alla presentazione dei dati (es. paginazione delle liste), sollevando quindi il BackEnd da tale compito.  
 Possibilità ulteriore di tale pattern architetturale è quella di modellare i dati in funzione del device di presentazione (es. mobile), e di effettuare delle specifiche verifiche: nel nostro caso specifico nel BFF vengono verificate le autorizzazioni utente all’operazione richiesta.  
 Nello sviluppo di Piattaforma Unitaria non verrà inizialmente offerto supporto a device mobili.  
