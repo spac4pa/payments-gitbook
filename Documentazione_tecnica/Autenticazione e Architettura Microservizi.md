@@ -116,7 +116,7 @@ Una Posizione Debitoria è creabile/modificabile/annullabile solo per gli enti i
 
 ## Installment State Diagram
 
-![][image2]
+![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image5.png)
 
 Per le seguenti transizioni:
 
@@ -297,11 +297,11 @@ Il componente deve essere integrata con diversi sistemi che possono partecipare 
 
 ## Vista dinamica delle componenti
 
-![][image3]  
-Sequence \- creazione nuovo client  
-![][image4]  
+![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image9.png)
+ Sequence \- creazione nuovo client  
+![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image3.png)
 Sequence \- revoke client  
-![][image5]  
+![Schema delle Componenti](https://github.com/spac4pa/payments-gitbook/blob/main/Documentazione_tecnica/Autenticazione_e_architettura_microservizi_Images/image16.png)
 Sequence \- a2a request
 
 ## Data layer
